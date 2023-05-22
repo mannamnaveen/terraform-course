@@ -1,3 +1,12 @@
+module "webserver1" {
+  source = ".//module1"
+
+}
+
+module "webserver2" {
+  source = ".//module2"
+
+}
 resource "aws_key_pair" "deployer" {
   key_name   = "k-key"
   public_key = var.public_key
